@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Darius/Desktop/Facultate/Data Structures/FixedCapBiMap/ExtendedTest.h
+
+C:/Users/Darius/Desktop/Facultate/Data Structures/FixedCapBiMap/ShortTest.h
+
+C:/Users/Darius/Desktop/Facultate/Data Structures/FixedCapBiMap/main.cpp
+iostream
+-
+ShortTest.h
+C:/Users/Darius/Desktop/Facultate/Data Structures/FixedCapBiMap/ShortTest.h
+ExtendedTest.h
+C:/Users/Darius/Desktop/Facultate/Data Structures/FixedCapBiMap/ExtendedTest.h
+

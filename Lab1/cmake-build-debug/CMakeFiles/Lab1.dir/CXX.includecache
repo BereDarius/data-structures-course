@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Darius/Desktop/Facultate/Data Structures/Lab1/Matrix.cpp
+Matrix.h
+C:/Users/Darius/Desktop/Facultate/Data Structures/Lab1/Matrix.h
+exception
+-
+cstdlib
+-
+
+C:/Users/Darius/Desktop/Facultate/Data Structures/Lab1/Matrix.h
+
