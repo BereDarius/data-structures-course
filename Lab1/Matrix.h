@@ -4,14 +4,6 @@
 typedef int TElem;
 #define NULL_TELEM 0
 
-struct SLLNode {
-    TElem value;
-    SLLNode* next;
-};
-
-struct SLL {
-    SLLNode* head;
-};
 
 class Matrix {
 
