@@ -15,16 +15,25 @@ void SortedSetIterator::first() {
 
 
 void SortedSetIterator::next() {
+    if (!this->valid()) {
+        throw exception();
+    }
     this->current = this->current->next;
 }
 
 
 TElem SortedSetIterator::getCurrent()
 {
+    if (!this->valid()) {
+        throw exception();
+    }
     return this->current->info;
 }
 
 bool SortedSetIterator::valid() const {
-    return (this->current != nullptr);
+    if (this->current == nullptr || this->current->info == NULL_TELEM) {
+        return false;
+    }
+    return true;
 }
 

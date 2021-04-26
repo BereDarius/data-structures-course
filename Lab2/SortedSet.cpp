@@ -10,64 +10,77 @@ SortedSet::SortedSet(Relation r) {
 
 
 bool SortedSet::add(TComp elem) {
-    if (this->size() == 0) {
+    SLLNode* current = this->elements;
+    auto newElem = new SLLNode;
+    newElem->info = elem;
+    if (this->isEmpty()) {
         this->elements->info = elem;
+        this->elements->next = nullptr;
         return true;
     }
-    SLLNode *current = this->elements;
-    SLLNode *aux = current;
-    if (this->relation(elem, current->info)) {
-        aux->info = elem;
-        aux->next = current;
-        this->elements = aux;
+    if (this->relation(elem, this->elements->info)) {
+        if (this->elements->info == elem) {
+            return false;
+        }
+        newElem->next = this->elements;
+        this->elements = newElem;
         return true;
     }
     while (current->next != nullptr) {
+        SLLNode* previous = current;
+        current = current->next;
         if (current->info == elem) {
             return false;
-        } else if (this->relation(elem, current->info)) {
-            aux->info = elem;
-            aux->next = current->next;
-            current->next = aux;
         }
-        current = current->next;
-    }
-    if (current->info == elem) {
-        return false;
+        if (this->relation(elem, current->info)) {
+            previous->next = newElem;
+            newElem->next = current;
+            return true;
+        }
     }
     if (current->next == nullptr) {
-        if (this->relation(elem, current->info)) {
-            TElem previous = current->info;
-            current->info = elem;
-            current->next = new SLLNode;
-            current->next->info = previous;
-            current->next->next = nullptr;
-        } else {
-            current->next = new SLLNode;
-            current->next->info = elem;
-            current->next->next = nullptr;
+        if (this->relation(current->info, elem)) {
+            if (current->info == elem) {
+                return false;
+            }
+            current->next = newElem;
+            newElem->next = nullptr;
+            return true;
         }
     }
-    return true;
+    return false;
 }
 
 bool SortedSet::remove(TComp elem) {
-    SLLNode* current = this->elements;
-    while (current->next != nullptr && current->next->info != elem) {
-        current = current->next;
-    }
-    if (current->next == nullptr) {
+    if (this->isEmpty()) {
         return false;
-    } else {
-        current->next = current->next->next;
+    }
+    if (this->size() == 1) {
+        if (this->elements->info == elem) {
+            this->elements->info = NULL_TELEM;
+            return true;
+        }
+    }
+    if (this->elements->info == elem) {
+        this->elements = this->elements->next;
         return true;
     }
+    SLLNode* current = this->elements;
+    while (current->next != nullptr) {
+        SLLNode* previous = current;
+        current = current->next;
+        if (current->info == elem) {
+            previous->next = current->next;
+            return true;
+        }
+    }
+    return false;
 }
 
 
 bool SortedSet::search(TComp elem) const {
     SLLNode* current = this->elements;
-    while (current->next != nullptr && current->next->info != elem) {
+    while (current->next != nullptr && current->info != elem) {
         current = current->next;
     }
     if (current->next == nullptr) {
@@ -82,7 +95,7 @@ bool SortedSet::search(TComp elem) const {
 
 
 int SortedSet::size() const {
-    if (this->elements->info == NULL_TELEM) {
+    if (this->elements == nullptr || this->elements->info == NULL_TELEM) {
         return 0;
     }
     int size = 0;
@@ -97,10 +110,10 @@ int SortedSet::size() const {
 
 
 bool SortedSet::isEmpty() const {
-    if (this->elements->info == NULL_TELEM && this->elements->next == nullptr) {
+    if (this->size() == 0) {
         return true;
     }
-	return false;
+    return false;
 }
 
 SortedSetIterator SortedSet::iterator() const {
