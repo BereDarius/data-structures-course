@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab3/ExtendedTest.cpp
+assert.h
+-
+exception
+-
+iostream
+-
+vector
+-
+algorithm
+-
+ExtendedTest.h
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab3/ExtendedTest.h
+IndexedList.h
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab3/IndexedList.h
+ListIterator.h
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab3/ListIterator.h
+
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab3/ExtendedTest.h
+
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab3/IndexedList.h
+
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab3/ListIterator.h
+IndexedList.h
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab3/IndexedList.h
+
