@@ -6,6 +6,46 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab2/App.cpp
+ShortTest.h
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab2/ShortTest.h
+ExtendedTest.h
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab2/ExtendedTest.h
+SortedSet.h
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab2/SortedSet.h
+SortedSetIterator.h
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab2/SortedSetIterator.h
+iostream
+-
+
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab2/ExtendedTest.cpp
+SortedSet.h
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab2/SortedSet.h
+assert.h
+-
+SortedSetIterator.h
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab2/SortedSetIterator.h
+exception
+-
+ExtendedTest.h
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab2/ExtendedTest.h
+iostream
+-
+
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab2/ExtendedTest.h
+
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab2/ShortTest.cpp
+ShortTest.h
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab2/ShortTest.h
+SortedSet.h
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab2/SortedSet.h
+SortedSetIterator.h
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab2/SortedSetIterator.h
+assert.h
+-
+
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab2/ShortTest.h
+
 C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab2/SortedSet.cpp
 SortedSet.h
 C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab2/SortedSet.h
@@ -13,6 +53,12 @@ SortedSetIterator.h
 C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab2/SortedSetIterator.h
 
 C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab2/SortedSet.h
+
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab2/SortedSetIterator.cpp
+SortedSetIterator.h
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab2/SortedSetIterator.h
+exception
+-
 
 C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab2/SortedSetIterator.h
 SortedSet.h

@@ -5,6 +5,8 @@
 using namespace std;
 
 int main(){
+
+
     testAll();
     testAllExtended();
     cout<<"Finished LI Tests!"<<endl;

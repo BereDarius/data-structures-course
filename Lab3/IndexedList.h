@@ -1,6 +1,8 @@
 #pragma once
 //DO NOT INCLUDE LISTITERATOR
 
+#include <iostream>
+
 //DO NOT CHANGE THIS PART
 typedef int TElem;
 #define NULL_TELEM -11111
@@ -55,5 +57,8 @@ public:
 
     //destructor
     ~IndexedList();
+
+    // resize function
+    void resize();
 
 };
