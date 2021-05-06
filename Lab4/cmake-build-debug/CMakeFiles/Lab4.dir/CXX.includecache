@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab4/App.cpp
+SortedBag.h
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab4/SortedBag.h
+SortedBagIterator.h
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab4/SortedBagIterator.h
+iostream
+-
+ShortTest.h
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab4/ShortTest.h
+ExtendedTest.h
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab4/ExtendedTest.h
+
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab4/ExtendedTest.h
+
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab4/ShortTest.h
+
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab4/SortedBag.h
+
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab4/SortedBagIterator.h
+SortedBag.h
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab4/SortedBag.h
+
