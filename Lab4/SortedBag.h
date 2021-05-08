@@ -7,6 +7,8 @@ typedef TComp TElem;
 typedef bool(*Relation)(TComp, TComp);
 #define NULL_TCOMP -11111;
 
+#define NULL_TELEM -842150451
+
 class SortedBagIterator;
 
 class SortedBag {
@@ -21,7 +23,7 @@ private:
     int numElements;
     int capacity;
 
-    int hash(TElem elem);
+    int hash(TElem elem) const;
     void rehash();
 
 public:
