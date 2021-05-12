@@ -13,11 +13,10 @@ SortedBagIterator::SortedBagIterator(const SortedBag& b) : bag(b) {
             index++;
         }
     }
-    // Bubble sort algorithm for sorting the elements array
     TElem temp;
     for (int i = 0; i < b.numElements - 1; i++) {
         for (int j = 0; j < b.numElements - i - 1; j++) {
-            if (b.relation(this->elements[j], this->elements[j + 1])) {
+            if (b.relation(this->elements[j + 1], this->elements[j])) {
                 temp = this->elements[j];
                 this->elements[j] = this->elements[j+1];
                 this->elements[j+1] = temp;

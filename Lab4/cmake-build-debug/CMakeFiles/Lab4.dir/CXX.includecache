@@ -6,13 +6,21 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab4/SortedBag.cpp
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab4/ExtendedTest.cpp
+ShortTest.h
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab4/ShortTest.h
 SortedBag.h
 C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab4/SortedBag.h
 SortedBagIterator.h
 C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab4/SortedBagIterator.h
-cmath
+assert.h
 -
+iostream
+-
+exception
+-
+
+C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab4/ShortTest.h
 
 C:/Users/tubor/Desktop/Facultate/Data Structures/data-structures-course/Lab4/SortedBag.h
 

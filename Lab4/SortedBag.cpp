@@ -16,12 +16,10 @@ SortedBag::SortedBag(Relation r) {
     this->numElements = 0;
     this->numBuckets = this->capacity;
     this->loadFactor = 0;
+    // Complexity: Theta(n)
 }
 
 void SortedBag::add(TComp e) {
-    if (this->loadFactor > 0.75) {
-        this->rehash();
-    }
     int key = this->hash(e);
     int index = -1;
     if (this->elements[key] == NULL_TELEM) {
@@ -43,46 +41,77 @@ void SortedBag::add(TComp e) {
         this->numBuckets--;
     }
     this->loadFactor = (float)this->numElements / (float)this->numBuckets;
+    if (this->loadFactor > 0.75) {
+        this->rehash();
+    }
+    // Complexity: Theta(n)
 }
 
 
 bool SortedBag::remove(TComp e) {
     int key = this->hash(e);
-    if (this->elements[key] == NULL_TELEM) {
-        return false;
+    int previous = key;
+    while (key != -1 && this->elements[key] != e) {
+        previous = key;
+        key = this->keys[key];
     }
-    if (this->keys[key] == -1) {
-        this->elements[key] = NULL_TELEM;
-        this->numElements--;
-        this->loadFactor = (float)this->numElements / (float)this->numBuckets;
-        return true;
+    if (key == -1) {
+        return false;
     } else {
-        int previous = key;
-        while (this->elements[key] != e) {
-            previous = key;
-            key = this->keys[key];
+        bool over = false;
+        int p;
+        int pp;
+        do {
+            p = this->keys[key];
+            pp = key;
+            while (p != -1 && this->hash(this->elements[p]) != key) {
+                pp = p;
+                p = this->keys[p];
+            }
+            if (p == -1) {
+                over = true;
+            } else {
+                this->elements[key] = this->elements[p];
+                previous = pp;
+                key = p;
+            }
+        } while (!over);
+        if (previous == -1) {
+            int index = 0;
+            while (index < this->capacity && previous == -1) {
+                if (this->keys[index] == key) {
+                    previous = index;
+                } else {
+                    index++;
+                }
+            }
+        }
+        if (previous == -1) {
+            this->keys[previous] = this->keys[key];
         }
         this->elements[key] = NULL_TELEM;
-        this->keys[previous] = this->keys[key];
         this->keys[key] = -1;
         this->numElements--;
         this->numBuckets++;
-        this->loadFactor = (float)this->numElements / (float)this->numBuckets;
         return true;
     }
+    // Complexity: Theta(n)
 }
 
 
 bool SortedBag::search(TComp elem) const {
     int key = this->hash(elem);
-    int e = this->elements[key];
+    if (this->elements[key] == NULL_TELEM) {
+        return false;
+    }
     while (key != -1) {
         if (this->elements[key] == elem) {
             return true;
         }
         key = this->keys[key];
     }
-	return false;
+    return false;
+    // Complexity: Theta(n)
 }
 
 
@@ -96,17 +125,20 @@ int SortedBag::nrOccurrences(TComp elem) const {
         key = this->keys[key];
     }
 	return count;
+    // Complexity: Theta(n)
 }
 
 
 
 int SortedBag::size() const {
 	return this->numElements;
+	// Complexity: Theta(1)
 }
 
 
 bool SortedBag::isEmpty() const {
 	return this->numElements == 0;
+	// Complexity: Theta(1)
 }
 
 
@@ -122,7 +154,8 @@ SortedBag::~SortedBag() {
 
 int SortedBag::hash(TElem elem) const {
     //Multiplication method
-    return floor(this->numBuckets * (elem * 0.61803398875 - floor(elem * 0.61803398875)));
+    //return floor(this->numBuckets * (elem * 0.61803398875 - floor(elem * 0.61803398875)));
+    return abs(elem % this->capacity);
 }
 
 void SortedBag::rehash() {
@@ -143,4 +176,5 @@ void SortedBag::rehash() {
             this->add(prevElements[i]);
         }
     }
+    // Complexity: Theta(n)
 }
